@@ -6,7 +6,7 @@ const fetcher = (args:any) => fetch (args).then((res) => res.json());
 
 export default function Home() {
 
-  const {data, error} = useSWR('http://localhost:8080', fetcher);
+  const {data, error} = useSWR('/api', fetcher);
 
   if(error) return <div>Filed to load</div>
   if(!data) return <div>Loading...</div>
