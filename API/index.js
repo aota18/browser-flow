@@ -19,6 +19,7 @@ app.get('/', (req, res) => {
 
 // Simple Route
 require('./app/routes/sample.routes.js')(app);
+require('./app/routes/flow.routes.js')(app);
 
 
 app.listen(port, () => {
